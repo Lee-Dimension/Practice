@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,StyleSheet,View,Button,TouchableOpacity} from 'react-native';
+import {Text,StyleSheet,TouchableOpacity} from 'react-native';
 
 
 function BarCodeButton(){

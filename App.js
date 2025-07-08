@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, StyleSheet, useColorScheme, View, Text } from 'react-native';
+import { StyleSheet, useColorScheme, View,} from 'react-native';
 import MainActivity from './MainActivity/MainActivity'
 
 function App() {
