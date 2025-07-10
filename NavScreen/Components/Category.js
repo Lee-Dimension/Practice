@@ -7,7 +7,6 @@ export default function Category(){
 
     const addCategory = () => {
         setCategories([...categories, {}]);
-
     };
 
     return(
