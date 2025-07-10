@@ -2,17 +2,16 @@ import React from 'react';
 import {View,StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import Consumption from './Components/Consumption';
-import Distribution from './Components/Distribution';
+import Categorie from './Components/Categorie';
 
 const Tab = createMaterialTopTabNavigator();
 
-export function NavScreen(){
+export default function NavScreen(){
     return(
         <NavigationContainer>
             <Tab.Navigator>
-                <Tab.Screen name="Distribution" component={Distribution} />
-                <Tab.Screen name="Consumption" component={Consumption} />
+                <Tab.Screen name="First" component={Categorie} />
+                <Tab.Screen name="Second" component={Categorie} />
             </Tab.Navigator>
         </NavigationContainer>
     );

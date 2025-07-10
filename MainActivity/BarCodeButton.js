@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
         width: '80%',
         margin: 15,
         padding: 15,
-        paddingBottom:10,
     },
     title: {
         fontSize:20,

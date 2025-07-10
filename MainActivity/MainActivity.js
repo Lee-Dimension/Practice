@@ -2,7 +2,7 @@ import React from 'react';
 import {View,StyleSheet, SafeAreaView} from 'react-native';
 import Header from './Components/Header';
 import BarCodeButton from './Components/BarCodeButton';
-import {NavScreen} from '../NavScreen/NavScreen';
+import NavScreen from '../NavScreen/NavScreen';
 
 function MainActivity(){
 
