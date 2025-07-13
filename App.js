@@ -1,23 +1,21 @@
 import React from 'react';
-import { StyleSheet, useColorScheme, View,StatusBar} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import MainActivity from './MainActivity/MainActivity'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+import MainActivity from './MainActivity/MainActivity';
+import ItemList     from './ItemList/ItemList';
+import Category     from './NavScreen/Components/Category';
 
-  return (
-    <View style={styles.container}>
-      <StatusBar backgroundColor="#001234" barStyle="dark-content" animated={true} />
-      <MainActivity />
-    </View>
-  );
-}
+ const Stack = createNativeStackNavigator();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
+ export default function App() {
+   return (
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="MainActivity" component={MainActivity} />
+        <Stack.Screen name="Category"     component={Category} />
+        <Stack.Screen name="ItemList"     component={ItemList} />
+      </Stack.Navigator>
+    </NavigationContainer>
+   );
+ }
