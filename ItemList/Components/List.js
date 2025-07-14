@@ -1,15 +1,25 @@
-import React, {useState,} from 'react';
-import {TextInput} from 'react-native';
+import React, {useState} from 'react';
+import { View, TextInput, FlatList, Text } from 'react-native';
 
-export default function List(){
-     const [text, setText] = useState('');
+const data = [
+  { id: '1', title: '첫번째 아이템' },
+  { id: '2', title: '두번째 아이템' },
+  { id: '3', title: '세번째 아이템' },
+];
+
+
+export default function List({filter}){
+
+    const filteredData = data.filter(item => 
+        item.title.includes(filter));
 
     return(
-        <TextInput
-            style={{ height: 40, borderColor: 'gray', borderWidth: 1, padding: 10 }}
-            placeholder="입력하세요"
-            value={text}
-            onChangeText={setText}
+        <FlatList
+            data={filteredData} 
+            keyExtractor = {item => item.id}
+            renderItem={({item}) => (
+                <Text>{item.title}</Text>
+            )}
         />
     );
 }

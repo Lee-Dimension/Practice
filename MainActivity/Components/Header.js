@@ -1,20 +1,22 @@
 import React from 'react';
-import {Text,StyleSheet,} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
+export default function Header({ text }) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>{text}</Text>
+    </View>
+  );
+}
 
-function Header(){
-
-    return(
-        <Text style={styles.title}>Inventory Management</Text>
-
-    );
-    
-};
 const styles = StyleSheet.create({
-    title: {
-        fontSize:20,
-        fontWeight:'bold',
-    },
+  container: {
+    backgroundColor: '#fff',
+    paddingVertical: 10,
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
 });
-
-export default Header;

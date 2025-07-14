@@ -22,7 +22,7 @@ export default function Category({navigation}){
                 </TouchableOpacity>
                 ) : (
                 <TouchableOpacity style={styles.box} onPress={() =>
-                    navigation.navigate('ItemList')}>
+                    navigation.navigate('ListScreen')}>
                         
                     <Text style={styles.boxText}>카테고리 {index + 1}</Text>
                 </TouchableOpacity>

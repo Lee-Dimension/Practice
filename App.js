@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import MainActivity from './MainActivity/MainActivity';
-import ItemList     from './ItemList/ItemList';
+import ListScreen     from './ItemList/ListScreen';
 import Category     from './NavScreen/Components/Category';
 
  const Stack = createNativeStackNavigator();
@@ -14,7 +14,7 @@ import Category     from './NavScreen/Components/Category';
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="MainActivity" component={MainActivity} />
         <Stack.Screen name="Category"     component={Category} />
-        <Stack.Screen name="ItemList"     component={ItemList} />
+        <Stack.Screen name="ListScreen"     component={ListScreen} />
       </Stack.Navigator>
     </NavigationContainer>
    );

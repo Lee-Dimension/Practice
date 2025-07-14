@@ -1,22 +1,23 @@
-import React, {useState} from 'react';
-import {Text, FlatList} from 'react-native';
+import React from 'react';
+import {TextInput,StyleSheet} from 'react-native';
 
-const data = [
-  { id: '1', title: '첫번째 아이템' },
-  { id: '2', title: '두번째 아이템' },
-  { id: '3', title: '세번째 아이템' },
-];
-
-
-export default function ItemList(){
-
+export default function SearchBox({value, onChangeText}){
     return(
-        <FlatList
-            data={data} 
-            keyExtractor = {item => item.id}
-            renterItem={({item}) => (
-                <Text>(item.title)</Text>
-            )}
+        <TextInput
+            style={styles.input}
+            placeholder="입력하세요"
+            value={value}
+            onChangeText={onChangeText}
+            returnKeyType="search"
         />
     );
 }
+const styles = StyleSheet.create({
+  input: {
+    height: 40,
+    borderRadius: 12,          
+    paddingHorizontal: 10,     // 좌우 여백
+    marginHorizontal: 20,
+    backgroundColor: '#f0f0f0',
+  },
+});
