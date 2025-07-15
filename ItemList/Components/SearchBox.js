@@ -1,8 +1,9 @@
 import React from 'react';
-import {TextInput,StyleSheet} from 'react-native';
+import {TextInput,StyleSheet,View,Text} from 'react-native';
 
 export default function SearchBox({value, onChangeText}){
     return(
+      <View>
         <TextInput
             style={styles.input}
             placeholder="입력하세요"
@@ -10,6 +11,11 @@ export default function SearchBox({value, onChangeText}){
             onChangeText={onChangeText}
             returnKeyType="search"
         />
+          <View style = {{flexDirection :'row', alignItems:'center'}}>
+            <Text>왼쪽</Text>
+            <Text>오른쪽</Text>
+          </View>
+        </View>
     );
 }
 const styles = StyleSheet.create({

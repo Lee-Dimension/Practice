@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, ScrollView,StyleSheet, SafeAreaView,StatusBar } from 'react-native';
+import { View,StyleSheet, SafeAreaView,StatusBar } from 'react-native';
 import List from './Components/List'
 import SearchBox from './Components/SearchBox'
 import Header from '../MainActivity/Components/Header';
@@ -44,7 +44,7 @@ export default function ListScreen(){
             alignItems: 'center',
         },
         content:{
-            flex:0.5,
+            flex:0.7,
         },
         footer:{
             flex:8,

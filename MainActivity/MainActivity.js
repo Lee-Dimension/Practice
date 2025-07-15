@@ -36,7 +36,7 @@ export default function MainActivity(){
             flex:1,
         },
         header:{
-            flex:0.6,
+            flex:0.8,
             backgroundColor: 'white',
             justifyContent: 'flex-end',
             alignItems: 'center',
